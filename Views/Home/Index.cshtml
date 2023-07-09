@@ -1,0 +1,299 @@
+﻿@{
+    ViewData["Title"] = "Home Page"; 
+    var mostpicks = ViewData["mostpicks"] as List<Database>;
+    var first_mostpicks = ViewData["first_mostpicks"] as Database;
+    var beautybackyard = ViewData["beautybackyard"] as List<Database>;
+    //var _beautybackyard = ViewData["beautybackyard"] as Database;
+
+    var livingroom = ViewData["livingroom"] as List<Database>;
+    var apartment = ViewData["apartment"] as List<Database>;
+}
+
+
+
+
+<!-- ======= Hero Section ======= -->
+
+
+<section id="about" class="about" style="margin-top:20vh">
+    <div class="container">
+        
+
+        <div class="row">
+         
+          <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0" style="padding-right:3vw;padding-left:6vw">
+            <h3 data-aos="fade-up" style="color:darkblue;font-weight:400">Forget Busy Work, Start Next Vacation</h3>
+            <p data-aos="fade-up">
+              We provide what you need to enjoy your holiday with Family.<br />Time to make another memorable moment.
+            </p>
+                <p>
+                    <button class="btn btn-primary" style="margin-bottom:7vh;color:white;">Show me Now</button>
+                 </p>
+            <div class="icon-box" >
+                    <!--<i class="bx bx-receipt"></i>-->
+           
+              
+                  
+
+                 <div style="display:flex;justify-content:space-between; ">
+
+                    <div >
+                        <span >
+                           <img src="~/img/new/travel.png" class="img-fluid" alt="travel"><br />
+                                <small><b>80,409</b> travellers</small>
+                        </span>
+                            
+                    </div>
+
+                    <div>
+                        <span style="margin-right:3vw">
+                            <img src="~/img/new/camera.png" class="img-fluid" alt="treasures"><br />
+                                <small><b>862</b> treasures</small>
+                        </span>
+                    </div>
+
+                     <div>
+                         <span style="margin-right:4vw">
+                            <img src="~/img/new/location.png" class="img-fluid" alt="location"><br/>
+                                <small><b>1,482</b>cities</small>
+                         </span>
+                     </div>
+
+                   
+                        
+              </div>
+            </div>
+
+            
+
+          </div>
+
+           <div class="col-xl-6 col-lg-7" data-aos="fade-right">
+                <img src="~/img/new/picture.png" class="img-fluid" alt="" width="400vw" height="400vh" style=" border-radius: 100px 15px 15px 15px;">
+           </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Most picks ======= -->
+    <section id="steps" class="steps section-bg">
+      <div class="container">
+          <div class="row">
+            <div class="col">
+                <h4>Most Picks</h4>
+              </div>
+          </div>
+        
+        <div style="display:flex;flex-direction:row;justify-content:space-around">
+
+            <div style="position:relative;" @*class="col-4"*@>
+                <img src="~/img/new/@first_mostpicks.Name" class="img-fluid" alt="" width="inherit" height="inherit" style="border-radius:20px;" data-aos="fade-in">
+                <span style="position:absolute; bottom:10px; left:10px; background-color:white; padding:5px 10px; border-radius:10px; color:black; font-weight:bold;">@first_mostpicks.City, @first_mostpicks.Location</span>
+                <span style="position:absolute; top:10px; right:10px; background-color:deeppink; padding:5px 10px; border-radius:10px; color:white; font-weight:bold;">@first_mostpicks.Price</span>
+            </div>
+
+            <div class="row no-gutters col-8">
+                @if (mostpicks != null)
+                {
+                    @foreach (var Database in mostpicks)
+                    {
+                        if (Database == first_mostpicks)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            <div class="col-lg-6 col-md-6" data-aos="fade-in">
+                                <div style="position:relative;">
+                                    <img src="~/img/new/@Database.Name" class="img-fluid" alt="" width="inherit" height="inherit" style="border-radius:20px;" data-aos="fade-in">
+                                    <span style="position:absolute; bottom:10px; left:10px; background-color:white; padding:5px 10px; border-radius:10px; color:black; font-weight:bold;">@Database.City,@Database.Location</span>
+                                    <span style="position:absolute; top:10px; right:10px; background-color:deeppink; padding:5px 10px; border-radius:10px; color:white; font-weight:bold;">@Database.Price</span>
+                                </div>
+                            </div>
+
+                        }
+                    }
+                }
+            </div>
+       </div>
+
+      </div>
+    </section><!-- End Most Picks -->
+
+
+
+    <!-- ======= Houses with beauty Backyards ======= -->
+   <section id="steps" class="steps section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Houses with beautiful Backyards</h4>
+            </div>
+        </div>
+
+        
+        <div style="display:flex;flex-direction:row;justify-content:space-between;text-align:center">
+
+          <div class=" row no-gutters">
+
+                @foreach (var Database in beautybackyard)
+                {
+                   @* if (Database == _beautybackyard)
+                    {
+                        continue;
+                    }else
+                    {*@
+
+
+                        <div class="col-lg-3 col-md-6" data-aos="fade-left" data-aos-delay="100">
+                            <div style="position:relative;">
+
+                                <img src="~/img/new/@Database.Name " class=" img-fluid" alt="" style="border-radius:20px;height:inherit;width:inherit;" data-aos="fade-in">
+                                <span style="position:absolute; top:10px; right:10px; background-color:deeppink; padding:5px 10px; border-radius:10px; color:white; font-weight:bold;">@Database.Description</span>
+                            </div>
+                            <h6>@Database.Location</h6>
+                          @*  <p>@Database.</p>*@
+                        </div>
+                    @*}*@
+                }
+
+           </div>
+
+
+        </div>
+
+    </div>
+</section><!-- End Houses with beauty Backyards -->
+
+
+<!-- ======= Hotels with large living rooms ======= -->
+<section id="steps" class="steps section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Hotels with large living rooms</h4>
+            </div>
+        </div>
+
+
+        <div style="display:flex;flex-direction:row;justify-content:space-between;text-align:center">
+
+            <div class=" row no-gutters">
+                @foreach(var Databse in livingroom)
+                {
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-left" data-aos-delay="100">
+                        <div style="position:relative;">
+                            <img src="~/img/new/@Databse.Name" class="img-fluid" alt="" style="border-radius:20px;height:inherit;width:inherit;" data-aos="fade-in">
+                            <span style="position:absolute; top:10px; right:10px; background-color:deeppink; padding:5px 10px; border-radius:10px; color:white; font-weight:bold;">@Databse.Description</span>
+                        </div>
+                        <h6>@Databse.Location</h6>
+                        <p>@Databse.City</p>
+                    </div>
+                }
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section><!-- Hotels with large living rooms -->
+
+
+
+<!-- =======  Apartments with Kitchen set ======= -->
+<section id="steps" class="steps section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Apartments with Kitchen set</h4>
+            </div>
+        </div>
+
+
+        <div style="display:flex;flex-direction:row;justify-content:space-between;text-align:center">
+
+            <div class=" row no-gutters">
+                @foreach(var Database in apartment)
+                {
+                    <div class="col-lg-3 col-md-6" data-aos="fade-left" data-aos-delay="100">
+                        <div style="position:relative;">
+                            <img src="~/img/new/@Database.Name" class="img-fluid" alt="" style="border-radius:20px;height:inherit;width:inherit;" data-aos="fade-in">
+                            <span style="position:absolute; top:10px; right:10px; background-color:deeppink; padding:5px 10px; border-radius:10px; color:white; font-weight:bold;">@Database.Popularity</span>
+                        </div>
+                        <h6>@Database.Location</h6>
+                        <p>@Database.City</p>
+                    </div>
+
+
+                }
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section><!-- Apartments with Kitchen set -->
+
+<section id="about" class="about" style="margin-top:20vh">
+    <div class="container">
+
+
+        <div class="row">
+
+
+            <div class="col-xl-6 col-lg-7" data-aos="fade-right">
+                <img src="~/img/new/r.svg" class="img-fluid" alt="" width="inherit" height="inherit" style=" border-radius: 100px 15px 15px 15px;">
+            </div>
+
+
+            <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0" style="padding-right:3vw;padding-left:6vw">
+                <h5 data-aos="fade-up" style="color:darkblue;font-weight:400">Happy Family</h5>
+             
+                <img src="~/img/new/alpha.jpg" class="img-fluid" alt="travel"><br />
+                <p data-aos="fade-up">
+                    What a great trip with my Family and.<br />I should try again next time soon.......
+                </p>
+                <p>
+                    <button  class="btn btn-primary" style="margin-bottom:7vh;color:white;">Read Their story</button>
+                </p>
+                <div class="icon-box">
+                    <!--<i class="bx bx-receipt"></i>-->
+
+
+
+
+                    <div style="display:flex;justify-content:space-between; ">
+
+                        
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+           
+
+        </div>
+
+    </div>
+</section><!-- End About Section -->
+
+
+
+
+
+
+
+    
+
+     
+

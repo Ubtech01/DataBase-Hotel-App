@@ -1,0 +1,18 @@
+|a.svg   | Blue Origin,Fams| Jakarta,Indonesia   | $50 Per night |                 |                              |Most picks    |false  |
+|b.svg   | Ocean Land      | Bandung,Indonesia   | $22 Per night |                 |                              |Most picks    |false  |
+|c.svg   | Stark house     | Malang ,Indonesia   | $856 Per night|                 |                              |Most picks    |false  |
+|d.svg   | Vinna vill      | Malang ,Indonesia   | $62 Per night |                 |                              |Most picks    |false  |
+|e.svg   | Bobox           | Medan, Indonesia    | $72 Per night |                 |                              |Most picks    |false  |
+|f.svg   | Shabby Town     |Gunung Batu,Indonesia|               |beauty backyard  |Houses with beautiful Backyard|Popular Choice|false  |
+|g.svg   | Anganna         | Bogor ,Indonesia    |               |beauty backyard  |Houses with beautiful Backyard| Popular Choice|false |
+|h.svg   | Seattle Rain    | Jakarta ,Indonesia  |               |beauty backyard  |Houses with beautiful Backyard| Popular Choice|false |
+|i.svg   | Wooden Pit      | Wonosoba ,Indonesia |               |beauty backyard  |Houses with beautiful Backyard|Popular Choice |false |
+|j.svg   | Geen Park       |Tangarang ,Indonesia |               |living room      |Hotels With Large Living rooms|Popular Choice |false |
+|k.svg   | Podo Wae        |Padium,Indonesia     |               |living room      |Hotels With Large Living roomms|Popular Choice|false |
+|l.svg   | Silver Rain     | Bandung,Indonesia   |               |living room      |Hotels With Large Living rooms|Popular Choice |false |
+|m.svg   | Cash ville      |Kemang,Indonesia     |               |living room      |Hotels With Large Living rooms|Popular Choice |true  |
+|n.svg   | Ps Wood         |Depok,Indonesia      |               |Apartment        |Apartments With Kitchen set   |Popular Choice |false |       
+|o.svg   | One Five        | Jakarta ,Indonesia  |               |Apartment        |Apartments With Kitchen set   |Popular Choice  |false|
+|p.svg   | Minimal         | Bogor,Indonesia     |               |Apartment        |Apartments With Kitchen set   |Popular Choice  |true |
+|q.svg   | Stays Home      |Wonosoba,Indonesia   |               |Apartment        |Apartments With Kitchen set   |Popular Choice  |false |
+  
